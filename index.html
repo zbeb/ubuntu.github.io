@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubuntu Desktop - Shadi Beilouny</title>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@400;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <header>
+      <div class="header-container">
+        <p class="activity">Activities</p>
+        <nav>
+          <a href="1.html">page 1</a>
+          <a href="2.html">page 2</a>
+          <a href="3.html">page 3</a>
+        </nav>
+        <p class="date-time">Nov 11 18:45</p>
+        <div class="utils">
+          <ul>
+            <li>
+              <img
+                src="images/speaker-filled-audio-tool.png"
+                alt="speaker-icon"
+              />
+            </li>
+            <li>
+              <img src="images/full-battery.png" alt="battery-icon" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="desktop">
+      <aside class="sidebar">
+        <!-- SIDEBAR APPS-->
+        <ul class="sidebar-apps">
+          <!-- Firefox -->
+          <li>
+            <label for="toggle1">
+              <img
+                class="firefox-app"
+                src="images/firefox_512.png"
+                alt="firefox"
+              />
+            </label>
+            <div class="open-close"></div>
+          </li>
+
+          <!-- Terminal -->
+          <li>
+            <label for="toggle2">
+              <img
+                class="terminal-app"
+                src="images/terminal-app.png"
+                alt="terminal-app"
+              />
+            </label>
+            <div class="open-close"></div>
+          </li>
+
+          <!-- Home folder -->
+          <li>
+            <label for="toggle3">
+              <img class="folder-app" src="images/folder.png" alt="files-app" />
+            </label>
+            <div class="open-close"></div>
+          </li>
+
+          <!-- Separator -->
+          <li class="line"></li>
+
+          <!-- Trash -->
+          <li>
+            <img
+              class="user-trash"
+              src="images/user-trash.png"
+              alt="trash-app"
+            />
+          </li>
+
+          <li class="last-item">
+            <img class="app-menu" src="images/apps-menu.png" alt="app-menu" />
+          </li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <div class="background"></div>
+
+        <section class="windows-container window">
+          <!-- FIREFOX APP -->
+          <input type="checkbox" id="toggle1" style="display: none" />
+
+          <article class="firefox-container">
+            <div class="firefox-header">
+              <div class="firefox-header-tab">
+                <div class="tab">
+                  <p>New Tab</p>
+                  <p class="close-tab">x</p>
+                </div>
+                <div class="tab main-tab">
+                  <p>Ubuntu</p>
+                  <p class="close-tab">x</p>
+                </div>
+                <div class="plus-tab">+</div>
+                <label for="toggle1" class="close-firefox">✕</label>
+              </div>
+              <div class="firefox-header-search">
+                <div class="nav-buttons">
+                  <p class="nav-button arrow-left">🡠</p>
+                  <p class="nav-button arrow-right">🡢</p>
+                  <p class="nav-button refresh">⟳</p>
+                </div>
+                <input
+                  type="text"
+                  class="search-bar"
+                  placeholder="Search with Google or enter address"
+                  readonly
+                />
+              </div>
+              <div class="firefox-header-bookmark">
+                <p>Import bookmarks...</p>
+                <p>Getting Started</p>
+              </div>
+            </div>
+            <div class="firefox-body">placeholder</div>
+          </article>
+
+          <!-- TERMINAL APP -->
+          <article>
+            <input type="checkbox" id="toggle2" style="display: none" />
+
+            <div class="CMD-container window">
+              <!-- CMD HEADER-->
+              <div class="CMD-header">
+                <h1>shadi@x410dev: ~</h1>
+                <div class="close-terminal-container">
+                  <label for="toggle2" class="close-terminal">x</label>
+                </div>
+              </div>
+              <!-- CMD BODY-->
+              <div class="CMD-body">
+                <p>
+                  Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-38-generic
+                  x86_64)
+                </p>
+                <p>* Documentation: https://help.ubuntu.com</p>
+                <p>* This system is managed by 'shadi'.</p>
+                <p>Last login: Thu Nov 11 18:45:00 2024</p>
+                <div id="cmd-input">
+                  <span id="cmd-line">shadi@x410dev: ~$ </span>
+                  <span id="cmd-line">
+                    shadi@x410dev: ~$
+
+                    <input type="text" id="cmd-text" placeholder="▌" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <input type="checkbox" id="toggle3" style="display: none" />
+          <!-- FILES APP -->
+          <article class="folder-container window">
+            <!-- FOLDER HEADER-->
+            <div class="folder-header">
+              <select id="menu-tab">
+                <option value="1">🏠 Home</option>
+                <option value="2">🖥️ Desktop</option>
+                <option value="3">📄 Documents</option>
+                <option value="4">📥 Downloads</option>
+                <option value="5">🎶 Music</option>
+              </select>
+              <!-- Close button -->
+              <label for="toggle3" class="close-folder">x</label>
+            </div>
+            <!-- FOLDER BODY-->
+            <div class="folder-body">
+              <!-- FOLDER LEFT MENU -->
+              <aside class="folder-menu">
+                <ul>
+                  <li><p>Home</p></li>
+                  <li><p>Desktop</p></li>
+                  <li><p>Documents</p></li>
+                  <li><p>Downloads</p></li>
+                </ul>
+              </aside>
+              <!-- FOLDER MAIN ITEMS -->
+              <ul class="folder-items">
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>Documents</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>Downloads</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>Music</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>Pictures</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>Videos</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>.cache</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>.config</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>.local</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>.mozilla</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>.gnupg</p>
+                </li>
+                <li>
+                  <img src="images/folder.png" alt="folder-icon" />
+                  <p>.ssh</p>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>Shadi Beilouny,</p>
+    </footer>
+  </body>
+</html>
